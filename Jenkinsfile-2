@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'jenkins/jenkins:lts' }
+        docker { image 'jenkins/jenkins:2.60.1' }
     }
     stages {
         stage('Test') {
