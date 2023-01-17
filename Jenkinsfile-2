@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'jenkins/jenkins:lts' }
+        docker { image 'getintodevops/jenkins-withdocker:lts' }
     }
     stages {
         stage('Test') {
