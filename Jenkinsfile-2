@@ -1,13 +1,13 @@
-stage('Initialize'){
-        def dockerHome = tool 'myDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
-    
 pipeline {
     agent {
         docker { image 'jenkins/jenkins:lts' }
     }
     stages {
+    
+    stage('Initialize'){
+        def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
         stage('Test') {
             steps {
                 sh 'ls'
